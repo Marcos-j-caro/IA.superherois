@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz de Super-Heróis</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button id="theme-toggle">Modo Escuro</button>
+    <div id="start-screen">
+        <div class="start-content">
+            <h1>Quiz de Super-Heróis</h1>
+            <img src="superhero-image.jpg" alt="Super-Herói" class="start-image">
+            <p>Teste seus conhecimentos sobre o mundo dos super-heróis com este quiz emocionante!</p>
+            <button id="start-button">Iniciar Quiz</button>
+        </div>
+    </div>
+    <div id="quiz-container" style="display: none;">
+        <div id="question-container">
+            <!-- As perguntas serão carregadas aqui -->
+        </div>
+        <div id="navigation-buttons">
+            <button id="prev-button" onclick="navigate(-1)">Anterior</button>
+            <button id="next-button" onclick="navigate(1)">Próxima</button>
+        </div>
+    </div>
+    <div id="result-container" style="display: none;">
+        <h2>Resumo do Quiz</h2>
+        <div id="result-details">
+            <!-- O resumo das respostas será exibido aqui -->
+        </div>
+        <button id="restart-button">Reiniciar Quiz</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
