@@ -1,179 +1,119 @@
-const questions = [
-    {
-        question: "Qual super-herói tem o alter ego de Bruce Wayne?",
-        options: ["Batman", "Superman", "Homem-Aranha", "Capitão América"],
-        answer: "Batman"
-    },
-    {
-        question: "Qual é o nome da cidade onde o Batman opera?",
-        options: ["Gotham", "Metrópolis", "Star City", "Central City"],
-        answer: "Gotham"
-    },
-    {
-        question: "Qual super-herói é conhecido como 'O Amigo da Vizinhança'?",
-        options: ["Homem-Aranha", "Deadpool", "Flash", "Pantera Negra"],
-        answer: "Homem-Aranha"
-    },
-    {
-        question: "Qual é o planeta natal do Superman?",
-        options: ["Krypton", "Vulcano", "Mídgard", "Tatooine"],
-        answer: "Krypton"
-    },
-    {
-        question: "Qual super-herói usa um escudo feito de vibranium?",
-        options: ["Capitão América", "Thor", "Hulk", "Lanterna Verde"],
-        answer: "Capitão América"
-    },
-    {
-        question: "Qual é o nome da super-heroína conhecida por seu laço da verdade e sua tiara?",
-        options: ["Mulher-Maravilha", "Viúva Negra", "Jean Grey", "Doutora Estranha"],
-        answer: "Mulher-Maravilha"
-    },
-    {
-        question: "Qual herói é conhecido por seu martelo chamado Mjolnir?",
-        options: ["Thor", "Loki", "Hela", "Odin"],
-        answer: "Thor"
-    },
-    {
-        question: "Qual é o nome do super-herói que pode se transformar em um gigante verde quando está irritado?",
-        options: ["Hulk", "Homem-Aranha", "Wolverine", "Pantera Negra"],
-        answer: "Hulk"
-    },
-    {
-        question: "Qual é o verdadeiro nome do Homem de Ferro?",
-        options: ["Tony Stark", "Peter Parker", "Clark Kent", "Bruce Banner"],
-        answer: "Tony Stark"
-    },
-    {
-        question: "Qual é o nome da organização secreta que criou o Deadpool?",
-        options: ["Arma X", "S.H.I.E.L.D.", "Hydra", "The Hand"],
-        answer: "Arma X"
-    },
-    {
-        question: "Qual super-herói tem a habilidade de correr em alta velocidade?",
-        options: ["Flash", "Mercúrio", "Homem-Aranha", "Capitão Marvel"],
-        answer: "Flash"
-    },
-    {
-        question: "Quem é o alter ego da Viúva Negra?",
-        options: ["Natasha Romanoff", "Wanda Maximoff", "Carol Danvers", "Peggy Carter"],
-        answer: "Natasha Romanoff"
-    },
-    {
-        question: "Qual é o super-herói que possui um anel de poder verde?",
-        options: ["Lanterna Verde", "Nova", "Doutor Estranho", "Magia"],
-        answer: "Lanterna Verde"
-    },
-    {
-        question: "Qual super-herói é conhecido por seu traje metálico e por ser um gênio da engenharia?",
-        options: ["Homem de Ferro", "Homem-Formiga", "Doutor Octopus", "Deadpool"],
-        answer: "Homem de Ferro"
-    },
-    {
-        question: "Qual é o nome do alter ego de Clark Kent?",
-        options: ["Superman", "Batman", "Aquaman", "Wolverine"],
-        answer: "Superman"
-    }
-];
+document.addEventListener('DOMContentLoaded', () => {
+    const perguntas = [
+        {
+            pergunta: "Qual é o seu ambiente de combate preferido?",
+            opcoes: ["Cidade grande", "Floresta ou ambiente natural", "Espaço ou outros planetas", "Laboratório ou ambiente tecnológico"]
+        },
+        {
+            pergunta: "Como você prefere lidar com os desafios?",
+            opcoes: ["Usando força bruta e habilidades físicas", "Com inteligência e estratégia", "Com habilidades especiais ou poderes", "Com tecnologia e gadgets"]
+        },
+        {
+            pergunta: "Qual é a sua abordagem quando enfrenta um inimigo?",
+            opcoes: ["Enfrento diretamente e com coragem", "Planejo e preparo uma estratégia detalhada", "Uso meus poderes ou habilidades especiais", "Utilizo equipamentos e armas tecnológicas"]
+        },
+        {
+            pergunta: "Qual é a sua maior qualidade?",
+            opcoes: ["Coragem e bravura", "Inteligência e criatividade", "Determinação e força sobre-humana", "Habilidade em ciência e tecnologia"]
+        },
+        {
+            pergunta: "Se você pudesse escolher um superpoder, qual seria?",
+            opcoes: ["Superforça", "Inteligência superior e habilidades analíticas", "Telepatia ou controle mental", "Controle sobre máquinas e tecnologia"]
+        },
+        {
+            pergunta: "Qual é a sua filosofia de vida?",
+            opcoes: ["A justiça deve prevalecer a qualquer custo.", "Conhecimento é poder, e o planejamento é fundamental.", "Com grandes poderes vêm grandes responsabilidades.", "A tecnologia pode mudar o mundo para melhor."]
+        },
+        {
+            pergunta: "Qual é o seu tipo de treinamento favorito?",
+            opcoes: ["Treinamento físico e combate", "Estudos e desenvolvimento intelectual", "Prática de habilidades especiais e poderes", "Aperfeiçoamento em tecnologia e engenharia"]
+        },
+        {
+            pergunta: "Como você se relaciona com os outros?",
+            opcoes: ["Como um líder protetor", "Como um mentor sábio", "Como um aliado poderoso e inspirador", "Como um colaborador engenhoso"]
+        },
+        {
+            pergunta: "Qual é o seu tipo de música favorito?",
+            opcoes: ["Rock", "Jazz", "Música Eletrônica", "Clássica"]
+        },
+        {
+            pergunta: "Qual é o seu animal preferido?",
+            opcoes: ["Leão", "Águia", "Lobo", "Cervo"]
+        }
+    ];
 
-let currentQuestionIndex = 0;
-const userAnswers = [];
+    const resultados = [
+        "Você é Superman! Você é corajoso, tem uma forte moral e é conhecido por sua força e habilidades sobre-humanas.",
+        "Você é Batman! Você usa sua inteligência e planejamento para superar desafios. Com uma mente estratégica e habilidades de detetive, você enfrenta o mal com determinação e astúcia.",
+        "Você é Jean Grey (ou outro telepata/poderoso)! Você possui habilidades extraordinárias e um grande poder interior. Sua abordagem para enfrentar problemas é através de seus poderes especiais e sua profunda conexão com eles.",
+        "Você é Homem de Ferro (Iron Man)! Você se destaca em tecnologia e inovação. Usando sua mente brilhante e suas invenções, você luta contra o crime e aprimora o mundo ao seu redor com suas criações tecnológicas.",
+        "Você é Capitão Marvel! Você é destemido e está sempre pronto para lutar pelo que é certo. Seus poderes e determinação fazem de você um herói formidável.",
+        "Você é Pantera Negra! Você é um líder nato e tem um forte senso de dever e honra. Suas habilidades de combate e estratégia são incomparáveis."
+    ];
 
-function shuffleArray(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-    }
-    return array;
-}
-
-function loadQuestion(index) {
+    const startScreen = document.getElementById('start-screen');
+    const questionScreen = document.getElementById('question-screen');
+    const resultScreen = document.getElementById('result-screen');
     const questionContainer = document.getElementById('question-container');
-    questionContainer.innerHTML = '';
 
-    const question = questions[index];
-    const shuffledOptions = shuffleArray([...question.options]);
+    let currentQuestionIndex = 0;
+    const respostas = Array(perguntas.length).fill(null);
 
-    const questionElement = document.createElement('div');
-    questionElement.innerHTML = `<h2>${question.question}</h2>`;
-    
-    shuffledOptions.forEach(option => {
-        questionElement.innerHTML += `
-            <div class="question-option">
-                <input type="radio" name="answer" value="${option}" id="${option}">
-                <label for="${option}">${option}</label>
-            </div>
-        `;
+    document.getElementById('start-btn').addEventListener('click', () => {
+        startScreen.classList.add('hidden');
+        showQuestion();
+        questionScreen.classList.remove('hidden');
     });
 
-    questionContainer.appendChild(questionElement);
-
-    document.getElementById('prev-button').disabled = index === 0;
-    document.getElementById('next-button').disabled = index === questions.length - 1;
-}
-
-function navigate(direction) {
-    saveAnswer();
-    currentQuestionIndex += direction;
-    if (currentQuestionIndex < 0) currentQuestionIndex = 0;
-    if (currentQuestionIndex >= questions.length) {
-        showResult();
-        return;
-    }
-    loadQuestion(currentQuestionIndex);
-}
-
-function saveAnswer() {
-    const selectedOption = document.querySelector('input[name="answer"]:checked');
-    if (selectedOption) {
-        userAnswers[currentQuestionIndex] = selectedOption.value;
-    } else {
-        userAnswers[currentQuestionIndex] = null; // Caso a resposta não tenha sido selecionada
-    }
-}
-
-function showResult() {
-    const resultContainer = document.getElementById('result-details');
-    resultContainer.innerHTML = '';
-
-    questions.forEach((question, index) => {
-        const userAnswer = userAnswers[index];
-        const isCorrect = userAnswer === question.answer;
-        resultContainer.innerHTML += `
-            <div>
-                <h3>${question.question}</h3>
-                <p>Sua resposta: ${userAnswer ? userAnswer : 'Não respondida'}</p>
-                <p>Resposta correta: ${question.answer}</p>
-                <p>${isCorrect ? 'Correto!' : 'Incorreto!'}</p>
+    function showQuestion() {
+        const pergunta = perguntas[currentQuestionIndex];
+        questionContainer.innerHTML = `
+            <div class="question">
+                <h3>${pergunta.pergunta}</h3>
+                ${pergunta.opcoes.map((opcao, i) => `
+                    <label>
+                        <input type="radio" name="q${currentQuestionIndex}" value="${i}" required>
+                        ${opcao}
+                    </label>
+                `).join('')}
             </div>
         `;
+        questionContainer.querySelectorAll('input[type="radio"]').forEach(radio => {
+            radio.addEventListener('change', handleAnswer);
+        });
+    }
+
+    function handleAnswer(event) {
+        const resposta = event.target.value;
+        respostas[currentQuestionIndex] = resposta;
+
+        currentQuestionIndex++;
+        if (currentQuestionIndex < perguntas.length) {
+            showQuestion();
+        } else {
+            mostrarResultado();
+        }
+    }
+
+    function mostrarResultado() {
+        const contagem = [0, 0, 0, 0, 0, 0]; // Ajuste o tamanho conforme o número de resultados
+        respostas.forEach(resposta => {
+            contagem[parseInt(resposta)]++;
+        });
+
+        const maximo = Math.max(...contagem);
+        const indice = contagem.indexOf(maximo);
+
+        const resultado = resultados[indice] || "Você tem uma combinação de características de vários heróis!";
+        document.getElementById('result').textContent = resultado;
+        questionScreen.classList.add('hidden');
+        resultScreen.classList.remove('hidden');
+    }
+
+    document.getElementById('restart-btn').addEventListener('click', () => {
+        resultScreen.classList.add('hidden');
+        startScreen.classList.remove('hidden');
+        currentQuestionIndex = 0;
+        respostas.fill(null);
     });
-
-    document.getElementById('quiz-container').style.display = 'none';
-    document.getElementById('result-container').style.display = 'block';
-}
-
-document.getElementById('start-button').addEventListener('click', () => {
-    document.getElementById('start-screen').style.display = 'none';
-    document.getElementById('quiz-container').style.display = 'block';
-    questions.sort(() => Math.random() - 0.5); // Embaralha as perguntas
-    loadQuestion(currentQuestionIndex);
-});
-
-document.getElementById('restart-button').addEventListener('click', () => {
-    currentQuestionIndex = 0;
-    userAnswers.length = 0; // Limpa respostas anteriores
-    document.getElementById('result-container').style.display = 'none';
-    document.getElementById('start-screen').style.display = 'block';
-    document.getElementById('start-button').textContent = 'Iniciar Novo Quiz'; // Muda o texto do botão
-    document.getElementById('prev-button').disabled = true;
-    document.getElementById('next-button').disabled = false;
-});
-
-// Alternar entre modo claro e escuro
-const themeToggleButton = document.getElementById('theme-toggle');
-themeToggleButton.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-    const isDarkMode = document.body.classList.contains('dark-mode');
-    themeToggleButton.textContent = isDarkMode ? 'Modo Claro' : 'Modo Escuro';
 });

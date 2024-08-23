@@ -3,35 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz de Super-Heróis</title>
+    <title>Quiz: Qual Super-Herói Você Seria?</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <button id="theme-toggle">Modo Escuro</button>
-    <div id="start-screen">
-        <div class="start-content">
-            <h1>Quiz de Super-Heróis</h1>
-            <img src="superhero-image.jpg" alt="Super-Herói" class="start-image">
-            <p>Teste seus conhecimentos sobre o mundo dos super-heróis com este quiz emocionante!</p>
-            <button id="start-button">Iniciar Quiz</button>
-        </div>
+    <div id="start-screen" class="screen">
+        <h1>Bem-vindo ao Quiz!</h1>
+        <p>Descubra qual super-herói você seria com base nas suas respostas.</p>
+        <button id="start-btn">Começar o Quiz</button>
     </div>
-    <div id="quiz-container" style="display: none;">
+
+    <div id="question-screen" class="screen hidden">
         <div id="question-container">
-            <!-- As perguntas serão carregadas aqui -->
-        </div>
-        <div id="navigation-buttons">
-            <button id="prev-button" onclick="navigate(-1)">Anterior</button>
-            <button id="next-button" onclick="navigate(1)">Próxima</button>
+            <!-- Pergunta e opções serão inseridas aqui pelo JavaScript -->
         </div>
     </div>
-    <div id="result-container" style="display: none;">
-        <h2>Resumo do Quiz</h2>
-        <div id="result-details">
-            <!-- O resumo das respostas será exibido aqui -->
-        </div>
-        <button id="restart-button">Reiniciar Quiz</button>
+
+    <div id="result-screen" class="screen hidden">
+        <h1>Seu Resultado</h1>
+        <div id="result"></div>
+        <button id="restart-btn">Refazer o Quiz</button>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>

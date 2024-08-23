@@ -1,79 +1,65 @@
-/* Estilos para o modo claro */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     margin: 0;
-    padding: 0;
 }
 
-.start-content, #quiz-container, #result-container {
-    width: 80%;
-    max-width: 600px;
-    margin: auto;
+.screen {
+    background: #222;
     padding: 20px;
-    background: #fff;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.start-image {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    max-width: 600px;
     width: 100%;
-    border-radius: 8px;
+    text-align: center;
 }
 
-h1, h2 {
-    text-align: center;
+.hidden {
+    display: none;
 }
 
 button {
-    background-color: #d9534f;
+    padding: 10px 20px;
+    background-color: #d9534f; /* Vermelho */
     color: #fff;
     border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
     border-radius: 5px;
-    margin: 10px;
+    cursor: pointer;
+    margin-top: 20px;
 }
 
 button:hover {
-    background-color: #c9302c;
+    background-color: #c9302c; /* Vermelho escuro */
 }
 
-.question-option {
-    margin: 10px 0;
+h1, h3 {
+    color: #d9534f; /* Vermelho */
 }
 
-.question-option input {
+#question-container {
+    margin-bottom: 20px;
+}
+
+.question {
+    margin-bottom: 15px;
+}
+
+.question h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #fff; /* Branco */
+}
+
+input[type="radio"] {
     margin-right: 10px;
-}
-
-#navigation-buttons {
-    text-align: center;
-}
-
-/* Estilos para o modo escuro */
-body.dark-mode {
-    background-color: #333;
-    color: #f4f4f4;
-}
-
-body.dark-mode .start-content,
-body.dark-mode #quiz-container,
-body.dark-mode #result-container {
-    background: #444;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-}
-
-body.dark-mode button {
-    background-color: #5bc0de;
-}
-
-body.dark-mode button:hover {
-    background-color: #31b0d5;
-}
-
-body.dark-mode .question-option input {
-    accent-color: #5bc0de;
 }
