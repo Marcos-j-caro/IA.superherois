@@ -8,23 +8,22 @@
 </head>
 <body>
     <div id="start-screen" class="screen">
-        <h1>Bem-vindo ao Quiz!</h1>
-        <p>Descubra qual super-herói você seria com base nas suas respostas.</p>
+        <h1>Descubra qual super-herói você seria com base nas suas respostas!</h1>
+        <img src="MARVEL vs DC.png" alt="Descrição da imagem">
         <button id="start-btn">Começar o Quiz</button>
     </div>
 
     <div id="question-screen" class="screen hidden">
         <div id="question-container">
-            <!-- Pergunta e opções serão inseridas aqui pelo JavaScript -->
         </div>
+        <img src="MARVEL vs DC.png" alt="Descrição da imagem">
     </div>
-
-    <div id="result-screen" class="screen hidden">
-        <h1>Seu Resultado</h1>
-        <div id="result"></div>
-        <button id="restart-btn">Refazer o Quiz</button>
+    <div id="result-screen" class="hidden">
+        <h2>Resultado</h2>
+        <img id="result-image" src="" alt="Resultado" />
+        <p id="result"></p>
+        <button id="restart-btn">Reiniciar</button>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
