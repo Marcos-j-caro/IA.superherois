@@ -25,7 +25,7 @@ body {
 
 button {
     padding: 10px 20px;
-    background-color: #d9534f; /* Vermelho */
+    background-color: #d9534f; 
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -34,11 +34,11 @@ button {
 }
 
 button:hover {
-    background-color: #c9302c; /* Vermelho escuro */
+    background-color: #c9302c; 
 }
 
 h1, h3 {
-    color: #d9534f; /* Vermelho */
+    color: #d9534f; 
 }
 
 #question-container {
@@ -57,9 +57,14 @@ h1, h3 {
 label {
     display: block;
     margin-bottom: 8px;
-    color: #fff; /* Branco */
+    color: #fff;
 }
 
 input[type="radio"] {
     margin-right: 10px;
+}
+.resultado-imagem {
+    max-width: 350px; 
+    height: auto; 
+    margin-top: 40px; 
 }
